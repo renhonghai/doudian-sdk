@@ -1,0 +1,24 @@
+{
+    "name": "renhonghai/doudian-sdk",
+    "description": "抖店开放平台SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "renhonghai",
+            "email": "renhonghai@me.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-ctype": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Renhonghai\\DoudianSDK\\": "src"
+        }
+    }
+}
