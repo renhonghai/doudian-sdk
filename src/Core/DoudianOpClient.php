@@ -39,6 +39,7 @@ class DoudianOpClient
         $appSecret = $config->getAppSecret();
         $timestamp = time();
         $sign = SignUtil::sign($appKey, $appSecret, $method, $timestamp, $paramJson);
+        $accessTokenStr = $accessToken ? $accessToken->getAccessToken() : "";
 
         //String requestUrlPattern = "%s/%s?app_key=%s&method=%s&v=2&sign=%s&timestamp=%s&access_token=%s";
         $requestUrl = sprintf(
@@ -49,7 +50,7 @@ class DoudianOpClient
             $method,
             $sign,
             $timestamp,
-            $accessToken->getAccessToken() ?: ""
+            $accessTokenStr
         );
 
         //发送http请求
