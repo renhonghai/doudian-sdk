@@ -31,28 +31,34 @@ class DoudianOpClient
     public function request(AbstractRequest $request, ?AccessToken $accessToken = null)
     {
         $config = $request->getConfig();
+
         $urlPath = $request->getUrlPath();
         $method = $this->getMethod($urlPath);
         $paramJson = SignUtil::marshal($request->getParam());
-        $appKey = $config->appKey;
-        $appSecret = $config->appSecret;
+        $appKey = $config->getAppKey();
+        $appSecret = $config->getAppSecret();
         $timestamp = time();
         $sign = SignUtil::sign($appKey, $appSecret, $method, $timestamp, $paramJson);
-        $openHost = $config->openRequestUrl;
-        $accessTokenStr = "";
-        if ($accessToken != null) {
-            $accessTokenStr = $accessToken->getAccessToken();
-        }
 
         //String requestUrlPattern = "%s/%s?app_key=%s&method=%s&v=2&sign=%s&timestamp=%s&access_token=%s";
-        $requestUrl = $openHost.$urlPath."?"."app_key=".$appKey."&method=".$method."&v=2&sign=".$sign."&timestamp=".$timestamp."&access_token=".$accessTokenStr."&sign_method=hmac-sha256";
+        $requestUrl = sprintf(
+            "%s%s?app_key=%s&method=%s&v=2&sign=%s&timestamp=%d&access_token=%s&sign_method=hmac-sha256",
+            $config->getOpenRequestUrl(),
+            $urlPath,
+            $appKey,
+            $method,
+            $sign,
+            $timestamp,
+            $accessToken->getAccessToken() ?: ""
+        );
 
         //发送http请求
         $httpRequest = new HttpRequest();
-        $httpRequest->url = $requestUrl;
-        $httpRequest->body = $paramJson;
-        $httpRequest->connectTimeout = $config->httpConnectTimeout;
-        $httpRequest->readTimeout = $config->httpReadTimeout;
+        $httpRequest->setUrl($requestUrl);
+        $httpRequest->setBody($paramJson);
+        $httpRequest->setConnectTimeout($config->getHttpConnectTimeout());
+        $httpRequest->setReadTimeout($config->getHttpReadTimeout());
+
         $httpResponse = $this->httpClient->post($httpRequest);
 
         return json_decode($httpResponse->body, false, 512, JSON_UNESCAPED_UNICODE);
@@ -72,7 +78,6 @@ class DoudianOpClient
 
         return str_replace("/", ".", $methodPath);
     }
-
 
     public static function getInstance(): DoudianOpClient
     {
