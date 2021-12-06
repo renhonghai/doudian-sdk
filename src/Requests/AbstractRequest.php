@@ -82,7 +82,7 @@ abstract class AbstractRequest
             $response = DoudianOpClient::getInstance()->request($this, $accessToken);
             $doudianOpResponse = new DoudianOpResponse($response);
 
-            if (ErrNoConstant::ERR_NO_SUCCESS !== $doudianOpResponse->getCode()) {
+            if (ErrNoConstant::ERROR_NO_SUCCESS !== $doudianOpResponse->getErrNo()) {
                 throw new DoudianSDKException(
                     $doudianOpResponse->getCode(),
                     $doudianOpResponse->getSubCode(),
