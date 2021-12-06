@@ -2,6 +2,9 @@
 
 namespace AK\DoudianSDK\Requests;
 
+use AK\DoudianSDK\Constants\ErrNoConstant;
+use AK\DoudianSDK\Entities\DoudianOpResponse;
+use AK\DoudianSDK\Exceptions\DoudianSDKException;
 use Exception;
 use AK\DoudianSDK\Core\DoudianOpClient;
 use AK\DoudianSDK\Entities\AccessToken;
@@ -71,11 +74,27 @@ abstract class AbstractRequest
      * 执行请求
      * @param AccessToken|null $accessToken
      * @return mixed
-     * @throws Exception
+     * @throws DoudianSDKException
      */
     public function execute(?AccessToken $accessToken)
     {
-        return DoudianOpClient::getInstance()->request($this, $accessToken);
+        try {
+            $response = DoudianOpClient::getInstance()->request($this, $accessToken);
+            $doudianOpResponse = new DoudianOpResponse($response);
+
+            if (ErrNoConstant::ERR_NO_SUCCESS !== $doudianOpResponse->getCode()) {
+                throw new DoudianSDKException(
+                    $doudianOpResponse->getCode(),
+                    $doudianOpResponse->getSubCode(),
+                    $doudianOpResponse->getMsg(),
+                    $doudianOpResponse->getSubMsg()
+                );
+            }
+
+            return $doudianOpResponse->getData();
+        } catch (Exception $e) {
+            throw new DoudianSDKException($e->getCode(), $e->getMessage());
+        }
     }
 
 }

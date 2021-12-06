@@ -62,7 +62,7 @@ class DoudianOpClient
 
         $httpResponse = $this->httpClient->post($httpRequest);
 
-        return json_decode($httpResponse->body, false, 512, JSON_UNESCAPED_UNICODE);
+        return json_decode($httpResponse->body, true, 512, JSON_UNESCAPED_UNICODE);
     }
 
     private function getMethod($urlPath)
