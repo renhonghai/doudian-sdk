@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Promise;
+namespace AK\DoudianSDK\Entities\Param\Promise;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 
 class SetSkuShipTimeParam extends BaseEntity

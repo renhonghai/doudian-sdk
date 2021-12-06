@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\FreightTemplate;
+namespace AK\DoudianSDK\Entities\Param\FreightTemplate;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 
 class ListParam extends BaseEntity

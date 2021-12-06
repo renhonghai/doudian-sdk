@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Sms;
+namespace AK\DoudianSDK\Entities\Param\Sms;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 
 class TemplateDeleteParam extends BaseEntity

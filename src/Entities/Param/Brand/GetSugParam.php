@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Brand;
+namespace AK\DoudianSDK\Entities\Param\Brand;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 
 class GetSugParam extends BaseEntity

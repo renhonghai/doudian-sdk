@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Spu;
+namespace AK\DoudianSDK\Entities\Param\Spu;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 
 class GetSpuInfoBySpuIdParam extends BaseEntity

@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Warehouse;
+namespace AK\DoudianSDK\Requests\Warehouse;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class SetPriorityRequest extends AbstractRequest
 {

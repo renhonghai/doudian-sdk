@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\AfterSale;
+namespace AK\DoudianSDK\Requests\AfterSale;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class CancelSendGoodsSuccessRequest extends AbstractRequest
 {

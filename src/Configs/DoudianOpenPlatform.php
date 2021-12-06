@@ -1,6 +1,6 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Configs;
+namespace AK\DoudianSDK\Configs;
 
 class DoudianOpenPlatform
 {

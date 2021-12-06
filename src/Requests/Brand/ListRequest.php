@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Brand;
+namespace AK\DoudianSDK\Requests\Brand;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class ListRequest extends AbstractRequest
 {

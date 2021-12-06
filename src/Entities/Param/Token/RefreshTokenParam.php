@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Token;
+namespace AK\DoudianSDK\Entities\Param\Token;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 class RefreshTokenParam extends BaseEntity
 {

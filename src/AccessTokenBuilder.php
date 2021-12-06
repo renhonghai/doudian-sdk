@@ -1,14 +1,14 @@
 <?php
 
-namespace Renhonghai\DoudianSDK;
+namespace AK\DoudianSDK;
 
 use Exception;
-use Renhonghai\DoudianSDK\Entities\AccessToken;
-use Renhonghai\DoudianSDK\Entities\Param\Token\CreateTokenData;
-use Renhonghai\DoudianSDK\Entities\Param\Token\CreateTokenParam;
-use Renhonghai\DoudianSDK\Entities\Param\Token\RefreshTokenParam;
-use Renhonghai\DoudianSDK\Requests\Token\CreateTokenRequest;
-use Renhonghai\DoudianSDK\Requests\Token\RefreshTokenRequest;
+use AK\DoudianSDK\Entities\AccessToken;
+use AK\DoudianSDK\Entities\Param\Token\CreateTokenData;
+use AK\DoudianSDK\Entities\Param\Token\CreateTokenParam;
+use AK\DoudianSDK\Entities\Param\Token\RefreshTokenParam;
+use AK\DoudianSDK\Requests\Token\CreateTokenRequest;
+use AK\DoudianSDK\Requests\Token\RefreshTokenRequest;
 
 class AccessTokenBuilder
 {

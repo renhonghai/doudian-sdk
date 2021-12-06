@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Spu;
+namespace AK\DoudianSDK\Requests\Spu;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class GetSpuInfoBySpuIdRequest extends AbstractRequest
 {

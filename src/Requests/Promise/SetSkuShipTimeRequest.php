@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Promise;
+namespace AK\DoudianSDK\Requests\Promise;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class SetSkuShipTimeRequest extends AbstractRequest
 {

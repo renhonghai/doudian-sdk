@@ -1,10 +1,10 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Utils;
+namespace AK\DoudianSDK\Utils;
 
 use Exception;
-use Renhonghai\DoudianSDK\Entities\Http\HttpRequest;
-use Renhonghai\DoudianSDK\Entities\Http\HttpResponse;
+use AK\DoudianSDK\Entities\Http\HttpRequest;
+use AK\DoudianSDK\Entities\Http\HttpResponse;
 
 class HttpClientUtil
 {

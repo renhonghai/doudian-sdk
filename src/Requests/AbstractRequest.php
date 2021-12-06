@@ -1,12 +1,12 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests;
+namespace AK\DoudianSDK\Requests;
 
 use Exception;
-use Renhonghai\DoudianSDK\Core\DoudianOpClient;
-use Renhonghai\DoudianSDK\Entities\AccessToken;
-use Renhonghai\DoudianSDK\Entities\DoudianOpConfig;
-use Renhonghai\DoudianSDK\GlobalConfig;
+use AK\DoudianSDK\Core\DoudianOpClient;
+use AK\DoudianSDK\Entities\AccessToken;
+use AK\DoudianSDK\Entities\DoudianOpConfig;
+use AK\DoudianSDK\GlobalConfig;
 
 abstract class AbstractRequest
 {

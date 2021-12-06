@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\AfterSale;
+namespace AK\DoudianSDK\Entities\Param\AfterSale;
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 
 class BuyerExchangeConfirmParam extends BaseEntity

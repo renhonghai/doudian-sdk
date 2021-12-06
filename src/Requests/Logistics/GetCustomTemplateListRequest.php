@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Logistics;
+namespace AK\DoudianSDK\Requests\Logistics;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class GetCustomTemplateListRequest extends AbstractRequest
 {

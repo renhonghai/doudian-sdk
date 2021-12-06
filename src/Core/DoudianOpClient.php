@@ -1,13 +1,13 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Core;
+namespace AK\DoudianSDK\Core;
 
 use Exception;
-use Renhonghai\DoudianSDK\Entities\AccessToken;
-use Renhonghai\DoudianSDK\Entities\Http\HttpRequest;
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
-use Renhonghai\DoudianSDK\Utils\HttpClientUtil;
-use Renhonghai\DoudianSDK\Utils\SignUtil;
+use AK\DoudianSDK\Entities\AccessToken;
+use AK\DoudianSDK\Entities\Http\HttpRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Utils\HttpClientUtil;
+use AK\DoudianSDK\Utils\SignUtil;
 
 class DoudianOpClient
 {

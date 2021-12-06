@@ -1,6 +1,6 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Utils;
+namespace AK\DoudianSDK\Utils;
 
 class StrUtil
 {

@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Renhonghai\\DoudianSDK\\": "src"
+            "AK\\DoudianSDK\\": "src"
         }
     }
 }

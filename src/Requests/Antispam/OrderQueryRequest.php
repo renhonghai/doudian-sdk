@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Antispam;
+namespace AK\DoudianSDK\Requests\Antispam;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class OrderQueryRequest extends AbstractRequest
 {

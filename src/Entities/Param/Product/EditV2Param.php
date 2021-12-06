@@ -1,9 +1,9 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Product;
+namespace AK\DoudianSDK\Entities\Param\Product;
 
 
-use Renhonghai\DoudianSDK\Entities\BaseEntity;
+use AK\DoudianSDK\Entities\BaseEntity;
 
 class EditV2Param extends BaseEntity
 {

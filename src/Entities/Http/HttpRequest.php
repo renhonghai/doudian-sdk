@@ -1,6 +1,6 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Http;
+namespace AK\DoudianSDK\Entities\Http;
 
 class HttpRequest
 {

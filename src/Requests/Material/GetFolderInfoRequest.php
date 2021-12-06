@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Material;
+namespace AK\DoudianSDK\Requests\Material;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class GetFolderInfoRequest extends AbstractRequest
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities;
+namespace AK\DoudianSDK\Entities;
 
 class DoudianOpResponse
 {

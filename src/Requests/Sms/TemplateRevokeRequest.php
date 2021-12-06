@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Sms;
+namespace AK\DoudianSDK\Requests\Sms;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class TemplateRevokeRequest extends AbstractRequest
 {

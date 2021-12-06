@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\FreightTemplate;
+namespace AK\DoudianSDK\Requests\FreightTemplate;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class ListRequest extends AbstractRequest
 {

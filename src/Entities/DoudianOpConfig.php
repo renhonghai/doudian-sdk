@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities;
+namespace AK\DoudianSDK\Entities;
 
-use Renhonghai\DoudianSDK\Configs\DoudianOpenPlatform;
+use AK\DoudianSDK\Configs\DoudianOpenPlatform;
 
 class DoudianOpConfig extends BaseEntity
 {

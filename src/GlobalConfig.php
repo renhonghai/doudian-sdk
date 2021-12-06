@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK;
+namespace AK\DoudianSDK;
 
-use Renhonghai\DoudianSDK\Entities\DoudianOpConfig;
+use AK\DoudianSDK\Entities\DoudianOpConfig;
 
 class GlobalConfig extends DoudianOpConfig
 {

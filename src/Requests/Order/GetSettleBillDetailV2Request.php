@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Order;
+namespace AK\DoudianSDK\Requests\Order;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class GetSettleBillDetailV2Request extends AbstractRequest
 {

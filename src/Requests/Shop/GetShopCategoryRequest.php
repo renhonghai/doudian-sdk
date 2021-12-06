@@ -1,8 +1,8 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Requests\Shop;
+namespace AK\DoudianSDK\Requests\Shop;
 
-use Renhonghai\DoudianSDK\Requests\AbstractRequest;
+use AK\DoudianSDK\Requests\AbstractRequest;
 
 class GetShopCategoryRequest extends AbstractRequest
 {

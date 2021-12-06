@@ -1,10 +1,10 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities;
+namespace AK\DoudianSDK\Entities;
 
 use Exception;
 use ReflectionClass;
-use Renhonghai\DoudianSDK\Utils\{
+use AK\DoudianSDK\Utils\{
     StrUtil,
     ObjectUtil
 };

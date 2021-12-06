@@ -1,6 +1,6 @@
 <?php
 
-namespace Renhonghai\DoudianSDK\Entities\Param\Token;
+namespace AK\DoudianSDK\Entities\Param\Token;
 
 class CreateTokenData
 {
