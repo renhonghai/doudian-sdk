@@ -2,141 +2,104 @@
 
 namespace AK\DoudianSDK\Entities;
 
-use AK\DoudianSDK\Constants\ErrNoConstant;
-
-class AccessToken
+class AccessToken extends BaseEntity
 {
     const ACCESS_TOKEN_CODE = 1;
     const ACCESS_TOKEN_SHOP_ID = 2;
 
-    private $errNo;
+    private $access_token;
 
-    private $message;
+    private $expires_in;
 
-    private $logId;
+    private $refresh_token;
 
-    private $data;
+    private $scope;
+
+    private $shop_id;
+
+    private $shop_name;
 
     public static function wrap($resp): AccessToken
     {
-        if (is_array($resp)) {
-            $resp = json_decode(json_encode($resp));
-        }
-
-        $accessToken = new AccessToken();
-        if (property_exists($resp, "err_no")) {
-            $accessToken->setErrNo($resp->err_no);
-        }
-        if (property_exists($resp, "message")) {
-            $accessToken->setMessage($resp->message);
-        }
-        if (property_exists($resp, "log_id")) {
-            $accessToken->setLogId($resp->log_id);
-        }
-        if (property_exists($resp, "data")) {
-            $accessToken->setData($resp->data);
-        }
-        return $accessToken;
-    }
-
-    public function isSuccess(): bool
-    {
-        return $this->errNo == ErrNoConstant::ERROR_NO_SUCCESS;
+        return new AccessToken($resp);
     }
 
     public function getAccessToken()
     {
-        if ($this->data != null && property_exists($this->data, "access_token")) {
-            return $this->data->access_token;
-        }
-
-        return null;
+        return $this->access_token;
     }
 
     public function getExpireIn()
     {
-        if ($this->data != null && property_exists($this->data, "expires_in")) {
-            return $this->data->expires_in;
-        }
-
-        return null;
+        return $this->expires_in;
     }
 
     public function getRefreshToken()
     {
-        if ($this->data != null && property_exists($this->data, "refresh_token")) {
-            return $this->data->refresh_token;
-        }
-
-        return null;
+        return $this->refresh_token;
     }
 
     public function getScope()
     {
-        if ($this->data != null && property_exists($this->data, "scope")) {
-            return $this->data->scope;
-        }
-
-        return null;
+        return $this->scope;
     }
 
     public function getShopId()
     {
-        if ($this->data != null && property_exists($this->data, "shop_id")) {
-            return $this->data->shop_id;
-        }
-
-        return null;
+        return $this->shop_id;
     }
 
     public function getShopName()
     {
-        if ($this->data != null && property_exists($this->data, "shop_name")) {
-            return $this->data->shop_name;
-        }
-
-        return null;
+        return $this->shop_name;
     }
 
-
-    public function getErrNo()
+    /**
+     * @param mixed $access_token
+     */
+    public function setAccessToken($access_token): void
     {
-        return $this->errNo;
+        $this->access_token = $access_token;
     }
 
-    public function setErrNo($errNo)
+    /**
+     * @param mixed $expires_in
+     */
+    public function setExpiresIn($expires_in): void
     {
-        $this->errNo = $errNo;
+        $this->expires_in = $expires_in;
     }
 
-    public function getMessage()
+    /**
+     * @param mixed $refresh_token
+     */
+    public function setRefreshToken($refresh_token): void
     {
-        return $this->message;
+        $this->refresh_token = $refresh_token;
     }
 
-    public function setMessage($message)
+    /**
+     * @param mixed $scope
+     */
+    public function setScope($scope): void
     {
-        $this->message = $message;
+        $this->scope = $scope;
     }
 
-    public function getLogId()
+    /**
+     * @param mixed $shop_id
+     */
+    public function setShopId($shop_id): void
     {
-        return $this->logId;
+        $this->shop_id = $shop_id;
     }
 
-    public function setLogId($logId)
+    /**
+     * @param mixed $shop_name
+     */
+    public function setShopName($shop_name): void
     {
-        $this->logId = $logId;
-    }
-
-    public function setData($data)
-    {
-        $this->data = $data;
-    }
-
-    public function getData()
-    {
-        return $this->data;
+        $this->shop_name = $shop_name;
     }
 
 }
