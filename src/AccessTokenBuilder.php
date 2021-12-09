@@ -51,10 +51,9 @@ class AccessTokenBuilder
 
     public static function parse($accessTokenStr): AccessToken
     {
-        $tokenData = new CreateTokenData();
-        $tokenData->access_token = $accessTokenStr;
         $accessToken = new AccessToken();
-        $accessToken->setData($tokenData);
+        $accessToken->setAccessToken($accessTokenStr);
+
         return $accessToken;
     }
 }
