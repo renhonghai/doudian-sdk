@@ -28,7 +28,7 @@ class BaseEntity
         foreach ($keys as $key) {
             $value = call_user_func_array([
                 $this,
-                StrUtil::camel("get_{$key}")
+                StrUtil::camel("get_$key")
             ], []);
 
             if (is_null($value)) {
@@ -53,45 +53,30 @@ class BaseEntity
 
     public function keys(): array
     {
-        try {
-            $ref = new \ReflectionClass($this);
-            $properties = $ref->getProperties();
-            $parentClass = $ref->getParentClass();
+        $ref = new ReflectionClass($this);
+        $properties = $ref->getProperties();
+        $parentClass = $ref->getParentClass();
 
-            while(true) {
-                if ($parentClass->getName() == self::class) {
-                    break;
-                }
-
-                $properties += $parentClass->getProperties();
-                $parentClass = $parentClass->getParentClass();
+        while(true) {
+            if ($parentClass->getName() == self::class) {
+                break;
             }
 
-            $keys = [];
-            foreach ($properties as $property) {
-                $keys[] = $property->getName();
-            }
-
-            return $keys;
-        } catch (\ReflectionException $e) {
-            return [];
+            $properties += $parentClass->getProperties();
+            $parentClass = $parentClass->getParentClass();
         }
-    }
 
-    public function values(): array
-    {
-        return array_values($this->toArray());
+        $keys = [];
+        foreach ($properties as $property) {
+            $keys[] = $property->getName();
+        }
+
+        return $keys;
     }
 
     public function resolving($items)
     {
         ObjectUtil::assign($this, $items);
-    }
-
-    public function combine($items): BaseEntity
-    {
-        $this->resolving(array_combine($this->keys(), $items));
-        return $this;
     }
 
     public function toJson()
