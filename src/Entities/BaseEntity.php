@@ -9,7 +9,7 @@ use AK\DoudianSDK\Utils\{
     ObjectUtil
 };
 
-abstract class BaseEntity
+class BaseEntity
 {
 
     /**
@@ -22,38 +22,81 @@ abstract class BaseEntity
 
     public function toArray(): array
     {
-        try {
-            $ref        = new ReflectionClass($this);
-            $properties = $ref->getProperties();
+        $keys = $this->keys();
 
-            $items = [];
-            foreach ($properties as $property) {
-                $value = call_user_func_array([
-                    $this,
-                    StrUtil::camel("get_{$property->getName()}")
-                ], []);
+        $items = [];
+        foreach ($keys as $key) {
+            $value = call_user_func_array([
+                $this,
+                StrUtil::camel("get_{$key}")
+            ], []);
 
-                if (is_null($value)) {
-                    continue;
-                }
-
-                $items[$property->getName()] = $value;
+            if (is_null($value)) {
+                continue;
             }
 
-            return $items;
-        } catch (Exception $e) {
+            if (is_array($value)) {
+                foreach ($value as $k => $val) {
+                    if ($val instanceof BaseEntity) {
+                        $val = $val->toArray();
+                    }
+
+                    $value[$k] = $val;
+                }
+            }
+
+            $items[$key] = $value;
+        }
+
+        return $items;
+    }
+
+    public function keys(): array
+    {
+        try {
+            $ref = new \ReflectionClass($this);
+            $properties = $ref->getProperties();
+            $parentClass = $ref->getParentClass();
+
+            while(true) {
+                if ($parentClass->getName() == self::class) {
+                    break;
+                }
+
+                $properties += $parentClass->getProperties();
+                $parentClass = $parentClass->getParentClass();
+            }
+
+            $keys = [];
+            foreach ($properties as $property) {
+                $keys[] = $property->getName();
+            }
+
+            return $keys;
+        } catch (\ReflectionException $e) {
             return [];
         }
     }
 
-    public function toJson()
+    public function values(): array
     {
-        return json_encode($this->toArray(), JSON_UNESCAPED_UNICODE);
+        return array_values($this->toArray());
     }
 
     public function resolving($items)
     {
         ObjectUtil::assign($this, $items);
+    }
+
+    public function combine($items): BaseEntity
+    {
+        $this->resolving(array_combine($this->keys(), $items));
+        return $this;
+    }
+
+    public function toJson()
+    {
+        return json_encode($this->toArray(), JSON_UNESCAPED_UNICODE);
     }
 
     public function __toString(): string
