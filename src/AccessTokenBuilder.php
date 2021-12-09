@@ -29,7 +29,6 @@ class AccessTokenBuilder
         }
 
         $resp = (new CreateTokenRequest())->setParam($param)->execute(null);
-
         return AccessToken::wrap($resp);
     }
 

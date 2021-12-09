@@ -2,6 +2,8 @@
 
 namespace AK\DoudianSDK\Entities;
 
+use AK\DoudianSDK\Constants\ErrNoConstant;
+
 class AccessToken
 {
     const ACCESS_TOKEN_CODE = 1;
@@ -17,6 +19,10 @@ class AccessToken
 
     public static function wrap($resp): AccessToken
     {
+        if (is_array($resp)) {
+            $resp = json_decode(json_encode($resp));
+        }
+
         $accessToken = new AccessToken();
         if (property_exists($resp, "err_no")) {
             $accessToken->setErrNo($resp->err_no);
@@ -35,7 +41,7 @@ class AccessToken
 
     public function isSuccess(): bool
     {
-        return $this->errNo == 0;
+        return $this->errNo == ErrNoConstant::ERROR_NO_SUCCESS;
     }
 
     public function getAccessToken()
