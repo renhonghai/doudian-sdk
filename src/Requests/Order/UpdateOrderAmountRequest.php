@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class UpdateOrderAmountRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/updateOrderAmount";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/updateOrderAmount";
+    }
 
 
 }

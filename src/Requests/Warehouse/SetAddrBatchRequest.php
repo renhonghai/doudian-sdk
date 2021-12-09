@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SetAddrBatchRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/warehouse/setAddrBatch";
-	}
+    public function getUrlPath(): string
+    {
+        return "/warehouse/setAddrBatch";
+    }
 
 
 }

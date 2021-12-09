@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class GetAreasByProvinceRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/address/getAreasByProvince";
-	}
+    public function getUrlPath(): string
+    {
+        return "/address/getAreasByProvince";
+    }
 
 
 }

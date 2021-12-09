@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class ListV2Request extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/product/listV2";
-	}
+    public function getUrlPath(): string
+    {
+        return "/product/listV2";
+    }
 
 
 }

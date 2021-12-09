@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class CancelOrderRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/logistics/cancelOrder";
-	}
+    public function getUrlPath(): string
+    {
+        return "/logistics/cancelOrder";
+    }
 
 
 }

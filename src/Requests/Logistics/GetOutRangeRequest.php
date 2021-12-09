@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class GetOutRangeRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/logistics/getOutRange";
-	}
+    public function getUrlPath(): string
+    {
+        return "/logistics/getOutRange";
+    }
 
 
 }

@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class DeleteMaterialRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/deleteMaterial";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/deleteMaterial";
+    }
 
 
 }

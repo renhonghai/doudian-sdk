@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class QueryMaterialDetailRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/queryMaterialDetail";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/queryMaterialDetail";
+    }
 
 
 }

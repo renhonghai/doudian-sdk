@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SubmitEvidenceRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/afterSale/submitEvidence";
-	}
+    public function getUrlPath(): string
+    {
+        return "/afterSale/submitEvidence";
+    }
 
 
 }

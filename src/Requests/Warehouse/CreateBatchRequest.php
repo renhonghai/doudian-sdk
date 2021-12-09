@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class CreateBatchRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/warehouse/createBatch";
-	}
+    public function getUrlPath(): string
+    {
+        return "/warehouse/createBatch";
+    }
 
 
 }

@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class AddresSwitchConfigRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/addresSwitchConfig";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/addresSwitchConfig";
+    }
 
 
 }

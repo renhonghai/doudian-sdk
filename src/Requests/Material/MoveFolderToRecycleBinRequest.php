@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class MoveFolderToRecycleBinRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/moveFolderToRecycleBin";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/moveFolderToRecycleBin";
+    }
 
 
 }

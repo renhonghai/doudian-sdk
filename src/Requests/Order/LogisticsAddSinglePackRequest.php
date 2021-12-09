@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class LogisticsAddSinglePackRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/logisticsAddSinglePack";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/logisticsAddSinglePack";
+    }
 
 
 }

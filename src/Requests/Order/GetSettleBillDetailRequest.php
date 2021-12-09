@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class GetSettleBillDetailRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/getSettleBillDetail";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/getSettleBillDetail";
+    }
 
 
 }

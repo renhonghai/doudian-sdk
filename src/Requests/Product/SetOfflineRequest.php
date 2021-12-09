@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SetOfflineRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/product/setOffline";
-	}
+    public function getUrlPath(): string
+    {
+        return "/product/setOffline";
+    }
 
 
 }

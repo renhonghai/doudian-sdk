@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class InsuranceRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/insurance";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/insurance";
+    }
 
 
 }

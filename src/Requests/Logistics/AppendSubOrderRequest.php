@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class AppendSubOrderRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/logistics/appendSubOrder";
-	}
+    public function getUrlPath(): string
+    {
+        return "/logistics/appendSubOrder";
+    }
 
 
 }

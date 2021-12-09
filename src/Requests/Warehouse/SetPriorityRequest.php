@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SetPriorityRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/warehouse/setPriority";
-	}
+    public function getUrlPath(): string
+    {
+        return "/warehouse/setPriority";
+    }
 
 
 }

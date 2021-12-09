@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class TimeExtendRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/afterSale/timeExtend";
-	}
+    public function getUrlPath(): string
+    {
+        return "/afterSale/timeExtend";
+    }
 
 
 }

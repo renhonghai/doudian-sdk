@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class DownloadToShopRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/downloadToShop";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/downloadToShop";
+    }
 
 
 }

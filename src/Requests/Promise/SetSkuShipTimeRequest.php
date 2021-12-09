@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SetSkuShipTimeRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/promise/setSkuShipTime";
-	}
+    public function getUrlPath(): string
+    {
+        return "/promise/setSkuShipTime";
+    }
 
 
 }

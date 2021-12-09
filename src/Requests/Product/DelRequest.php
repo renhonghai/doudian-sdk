@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class DelRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/product/del";
-	}
+    public function getUrlPath(): string
+    {
+        return "/product/del";
+    }
 
 
 }

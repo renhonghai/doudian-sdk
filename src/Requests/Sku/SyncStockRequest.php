@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SyncStockRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/sku/syncStock";
-	}
+    public function getUrlPath(): string
+    {
+        return "/sku/syncStock";
+    }
 
 
 }

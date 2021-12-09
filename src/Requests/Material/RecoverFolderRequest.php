@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class RecoverFolderRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/recoverFolder";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/recoverFolder";
+    }
 
 
 }

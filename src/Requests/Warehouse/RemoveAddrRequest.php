@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class RemoveAddrRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/warehouse/removeAddr";
-	}
+    public function getUrlPath(): string
+    {
+        return "/warehouse/removeAddr";
+    }
 
 
 }

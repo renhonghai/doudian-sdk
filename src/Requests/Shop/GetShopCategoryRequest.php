@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class GetShopCategoryRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/shop/getShopCategory";
-	}
+    public function getUrlPath(): string
+    {
+        return "/shop/getShopCategory";
+    }
 
 
 }

@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class TemplateListRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/logistics/templateList";
-	}
+    public function getUrlPath(): string
+    {
+        return "/logistics/templateList";
+    }
 
 
 }

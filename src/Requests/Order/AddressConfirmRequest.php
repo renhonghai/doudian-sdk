@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class AddressConfirmRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/addressConfirm";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/addressConfirm";
+    }
 
 
 }

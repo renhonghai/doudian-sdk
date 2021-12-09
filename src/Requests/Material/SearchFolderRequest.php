@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class SearchFolderRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/searchFolder";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/searchFolder";
+    }
 
 
 }

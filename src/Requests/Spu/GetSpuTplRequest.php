@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class GetSpuTplRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/spu/getSpuTpl";
-	}
+    public function getUrlPath(): string
+    {
+        return "/spu/getSpuTpl";
+    }
 
 
 }

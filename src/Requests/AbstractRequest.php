@@ -93,7 +93,11 @@ abstract class AbstractRequest
 
             return $doudianOpResponse->getData();
         } catch (Exception $e) {
-            throw new DoudianSDKException($e->getCode(), $e->getMessage());
+            if (!($e instanceof DoudianSDKException)) {
+                throw new DoudianSDKException($e->getCode(), $e->getMessage());
+            }
+
+            throw $e;
         }
     }
 

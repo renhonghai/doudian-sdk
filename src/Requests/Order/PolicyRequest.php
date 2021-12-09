@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class PolicyRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/order/policy";
-	}
+    public function getUrlPath(): string
+    {
+        return "/order/policy";
+    }
 
 
 }

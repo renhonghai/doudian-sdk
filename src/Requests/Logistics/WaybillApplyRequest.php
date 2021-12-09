@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class WaybillApplyRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/logistics/waybillApply";
-	}
+    public function getUrlPath(): string
+    {
+        return "/logistics/waybillApply";
+    }
 
 
 }

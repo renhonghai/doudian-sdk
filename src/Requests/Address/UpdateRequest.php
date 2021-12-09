@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class UpdateRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/address/update";
-	}
+    public function getUrlPath(): string
+    {
+        return "/address/update";
+    }
 
 
 }

@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class UploadVideoAsyncRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/uploadVideoAsync";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/uploadVideoAsync";
+    }
 
 
 }

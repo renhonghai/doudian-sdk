@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class UploadImageSyncRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/uploadImageSync";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/uploadImageSync";
+    }
 
 
 }

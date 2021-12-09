@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class CreateSFOrderRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/logistics/createSFOrder";
-	}
+    public function getUrlPath(): string
+    {
+        return "/logistics/createSFOrder";
+    }
 
 
 }

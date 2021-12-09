@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class OrderSendRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/antispam/orderSend";
-	}
+    public function getUrlPath(): string
+    {
+        return "/antispam/orderSend";
+    }
 
 
 }

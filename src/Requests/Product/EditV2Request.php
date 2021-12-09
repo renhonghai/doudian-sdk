@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class EditV2Request extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/product/editV2";
-	}
+    public function getUrlPath(): string
+    {
+        return "/product/editV2";
+    }
 
 
 }

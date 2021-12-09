@@ -7,10 +7,10 @@ use AK\DoudianSDK\Requests\AbstractRequest;
 class DeleteFolderRequest extends AbstractRequest
 {
 
-	public function getUrlPath(): string
-	{
-		return "/material/deleteFolder";
-	}
+    public function getUrlPath(): string
+    {
+        return "/material/deleteFolder";
+    }
 
 
 }
