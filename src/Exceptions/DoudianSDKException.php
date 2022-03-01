@@ -4,7 +4,6 @@ namespace AK\DoudianSDK\Exceptions;
 
 use AK\DoudianSDK\Constants\ErrNoConstant;
 use Exception;
-use Throwable;
 
 class DoudianSDKException extends Exception
 {

@@ -88,15 +88,31 @@ class AddV2Param extends BaseEntity
 
     public $src;
 
-    public $market_price;
-
-    public $discount_price;
-
     public $standard_brand_id;
 
     public $need_check_out;
 
     public $poi_resource;
+
+    public $car_vin_code;
+
+    public $presell_config_level;
+
+    public $need_recharge_mode;
+
+    public $account_template_id;
+
+    public $presell_delivery_type;
+
+    public $white_back_ground_pic_url;
+
+    public $long_pic_url;
+
+    public $after_sale_service;
+
+    public $sell_channel;
+
+    public $start_sale_type;
 
     /**
      * @return mixed
@@ -741,38 +757,6 @@ class AddV2Param extends BaseEntity
     /**
      * @return mixed
      */
-    public function getMarketPrice()
-    {
-        return $this->market_price;
-    }
-
-    /**
-     * @param mixed $market_price
-     */
-    public function setMarketPrice($market_price): void
-    {
-        $this->market_price = $market_price;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDiscountPrice()
-    {
-        return $this->discount_price;
-    }
-
-    /**
-     * @param mixed $discount_price
-     */
-    public function setDiscountPrice($discount_price): void
-    {
-        $this->discount_price = $discount_price;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getStandardBrandId()
     {
         return $this->standard_brand_id;
@@ -816,6 +800,166 @@ class AddV2Param extends BaseEntity
     public function setPoiResource($poi_resource): void
     {
         $this->poi_resource = $poi_resource;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCarVinCode()
+    {
+        return $this->car_vin_code;
+    }
+
+    /**
+     * @param mixed $car_vin_code
+     */
+    public function setCarVinCode($car_vin_code): void
+    {
+        $this->car_vin_code = $car_vin_code;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPresellConfigLevel()
+    {
+        return $this->presell_config_level;
+    }
+
+    /**
+     * @param mixed $presell_config_level
+     */
+    public function setPresellConfigLevel($presell_config_level): void
+    {
+        $this->presell_config_level = $presell_config_level;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNeedRechargeMode()
+    {
+        return $this->need_recharge_mode;
+    }
+
+    /**
+     * @param mixed $need_recharge_mode
+     */
+    public function setNeedRechargeMode($need_recharge_mode): void
+    {
+        $this->need_recharge_mode = $need_recharge_mode;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAccountTemplateId()
+    {
+        return $this->account_template_id;
+    }
+
+    /**
+     * @param mixed $account_template_id
+     */
+    public function setAccountTemplateId($account_template_id): void
+    {
+        $this->account_template_id = $account_template_id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPresellDeliveryType()
+    {
+        return $this->presell_delivery_type;
+    }
+
+    /**
+     * @param mixed $presell_delivery_type
+     */
+    public function setPresellDeliveryType($presell_delivery_type): void
+    {
+        $this->presell_delivery_type = $presell_delivery_type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWhiteBackGroundPicUrl()
+    {
+        return $this->white_back_ground_pic_url;
+    }
+
+    /**
+     * @param mixed $white_back_ground_pic_url
+     */
+    public function setWhiteBackGroundPicUrl($white_back_ground_pic_url): void
+    {
+        $this->white_back_ground_pic_url = $white_back_ground_pic_url;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLongPicUrl()
+    {
+        return $this->long_pic_url;
+    }
+
+    /**
+     * @param mixed $long_pic_url
+     */
+    public function setLongPicUrl($long_pic_url): void
+    {
+        $this->long_pic_url = $long_pic_url;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAfterSaleService()
+    {
+        return $this->after_sale_service;
+    }
+
+    /**
+     * @param mixed $after_sale_service
+     */
+    public function setAfterSaleService($after_sale_service): void
+    {
+        $this->after_sale_service = $after_sale_service;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSellChannel()
+    {
+        return $this->sell_channel;
+    }
+
+    /**
+     * @param mixed $sell_channel
+     */
+    public function setSellChannel($sell_channel): void
+    {
+        $this->sell_channel = $sell_channel;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStartSaleType()
+    {
+        return $this->start_sale_type;
+    }
+
+    /**
+     * @param mixed $start_sale_type
+     */
+    public function setStartSaleType($start_sale_type): void
+    {
+        $this->start_sale_type = $start_sale_type;
     }
 
 }

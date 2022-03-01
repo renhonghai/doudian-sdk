@@ -2,6 +2,8 @@
 
 namespace AK\DoudianSDK\Utils;
 
+use AK\DoudianSDK\Constants\SignMethodConstant;
+
 class SignUtil
 {
 
@@ -14,6 +16,17 @@ class SignUtil
         $signPattern = $appSecret . $paramPattern . $appSecret;
 
         return hash_hmac("sha256", $signPattern, $appSecret);
+    }
+
+    public static function spiSign($appKey, $appSecret, $timestamp, $paramJson, $signMethodStr = 'md5') {
+        $paramPattern = 'app_key' . $appKey . 'param_json' . $paramJson . 'timestamp' . $timestamp;
+        $signPattern = $appSecret . $paramPattern . $appSecret;
+
+        if (SignMethodConstant::SHA256_STR === $signMethodStr) {
+            return hash_hmac("sha256", $signPattern, $appSecret);
+        }
+
+        return md5($signPattern);
     }
 
     /**

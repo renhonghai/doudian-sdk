@@ -14,6 +14,8 @@ class UploadImageSyncParam extends BaseEntity
 
     public $material_name;
 
+    public $need_distinct;
+
     /**
      * @return mixed
      */
@@ -60,6 +62,22 @@ class UploadImageSyncParam extends BaseEntity
     public function setMaterialName($material_name): void
     {
         $this->material_name = $material_name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNeedDistinct()
+    {
+        return $this->need_distinct;
+    }
+
+    /**
+     * @param mixed $need_distinct
+     */
+    public function setNeedDistinct($need_distinct): void
+    {
+        $this->need_distinct = $need_distinct;
     }
 
 }

@@ -29,19 +29,27 @@ class OperateParam extends BaseEntity
     }
 
     /**
-     * @return mixed
+     * @return OperateItemParam[]
      */
-    public function getItems()
+    public function getItems(): array
     {
         return $this->items;
     }
 
     /**
-     * @param mixed $items
+     * @param OperateItemParam[] $items
      */
-    public function setItems($items): void
+    public function setItems(array $items): void
     {
         $this->items = $items;
+    }
+
+    /**
+     * @param OperateItemParam $item
+     */
+    public function setItem(OperateItemParam $item)
+    {
+        $this->items[] = $item;
     }
 
 }

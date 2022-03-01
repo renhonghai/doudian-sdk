@@ -22,6 +22,8 @@ class QualityListParam extends BaseEntity
 
     public $task_id;
 
+    public $diagnose_status;
+
     /**
      * @return mixed
      */
@@ -132,6 +134,22 @@ class QualityListParam extends BaseEntity
     public function setTaskId($task_id): void
     {
         $this->task_id = $task_id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDiagnoseStatus()
+    {
+        return $this->diagnose_status;
+    }
+
+    /**
+     * @param mixed $diagnose_status
+     */
+    public function setDiagnoseStatus($diagnose_status): void
+    {
+        $this->diagnose_status = $diagnose_status;
     }
 
 }

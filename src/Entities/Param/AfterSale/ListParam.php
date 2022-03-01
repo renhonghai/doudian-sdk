@@ -52,6 +52,12 @@ class ListParam extends BaseEntity
 
     public $update_end_time;
 
+    public $order_logistics_tracking_no;
+
+    public $order_logistics_state;
+
+    public $agree_refuse_sign;
+
     /**
      * @return mixed
      */
@@ -402,6 +408,54 @@ class ListParam extends BaseEntity
     public function setUpdateEndTime($update_end_time): void
     {
         $this->update_end_time = $update_end_time;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrderLogisticsTrackingNo()
+    {
+        return $this->order_logistics_tracking_no;
+    }
+
+    /**
+     * @param mixed $order_logistics_tracking_no
+     */
+    public function setOrderLogisticsTrackingNo($order_logistics_tracking_no): void
+    {
+        $this->order_logistics_tracking_no = $order_logistics_tracking_no;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrderLogisticsState()
+    {
+        return $this->order_logistics_state;
+    }
+
+    /**
+     * @param mixed $order_logistics_state
+     */
+    public function setOrderLogisticsState($order_logistics_state): void
+    {
+        $this->order_logistics_state = $order_logistics_state;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAgreeRefuseSign()
+    {
+        return $this->agree_refuse_sign;
+    }
+
+    /**
+     * @param mixed $agree_refuse_sign
+     */
+    public function setAgreeRefuseSign($agree_refuse_sign): void
+    {
+        $this->agree_refuse_sign = $agree_refuse_sign;
     }
 
 }
