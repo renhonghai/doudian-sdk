@@ -38,6 +38,8 @@ class DoudianOpSpiClient
         if ($spiParam->getSign() != $sign) {
             $spiResponse->setCode(ResponseConstant::CODE_ERROR_SIGN);
             return $spiResponse;
+        } else {
+            $spiResponse->setCode(ResponseConstant::CODE_SUCCESS);
         }
 
         /**
