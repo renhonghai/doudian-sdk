@@ -10,6 +10,15 @@ class DoudianOpConfig extends BaseEntity
     public $appKey;
     public $appSecret;
 
+    public $shopId;
+
+    public $code;
+
+    /**
+     * @var string | AccessToken $token
+     */
+    public $token;
+
     public $httpConnectTimeout = DoudianOpenPlatform::OPEN_PLATFORM_HTTP_CONNECT_TIMEOUT;
     public $httpReadTimeout = DoudianOpenPlatform::OPEN_PLATFORM_HTTP_READ_TIMEOUT;
     public $openRequestUrl = DoudianOpenPlatform::OPEN_PLATFORM_REQUEST_URL;
@@ -92,6 +101,54 @@ class DoudianOpConfig extends BaseEntity
     public function setOpenRequestUrl(string $openRequestUrl): void
     {
         $this->openRequestUrl = $openRequestUrl;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShopId()
+    {
+        return $this->shopId;
+    }
+
+    /**
+     * @param mixed $shopId
+     */
+    public function setShopId($shopId): void
+    {
+        $this->shopId = $shopId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param mixed $code
+     */
+    public function setCode($code): void
+    {
+        $this->code = $code;
+    }
+
+    /**
+     * @return AccessToken|string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param AccessToken|string $token
+     */
+    public function setToken($token): void
+    {
+        $this->token = $token;
     }
 
 }

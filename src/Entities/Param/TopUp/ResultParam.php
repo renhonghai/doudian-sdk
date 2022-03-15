@@ -1,23 +1,23 @@
 <?php
 
-namespace AK\DoudianSDK\Entities\Response;
+namespace AK\DoudianSDK\Entities\Param\TopUp;
 
 use AK\DoudianSDK\Entities\BaseEntity;
 
-class SpiDataResponse extends BaseEntity
+class ResultParam extends BaseEntity
 {
 
-    private $trade_order_no;
+    public $trade_order_no;
 
-    private $topup_biz;
+    public $topup_biz;
 
-    private $seller_order_no;
+    public $seller_order_no;
 
-    private $seller_order_status;
+    public $seller_order_status;
 
-    private $err_code;
+    public $err_code;
 
-    private $err_desc;
+    public $err_desc;
 
     /**
      * @return mixed
