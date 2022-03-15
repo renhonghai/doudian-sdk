@@ -18,6 +18,19 @@ class SignUtil
         return hash_hmac("sha256", $signPattern, $appSecret);
     }
 
+    /**
+     * 消息通知签名
+     * @param $appKey
+     * @param $appSecret
+     * @param $requestBody
+     * @return string
+     */
+    public static function notifySign($appKey, $appSecret, $requestBody): string
+    {
+        $requestBody = preg_replace('/\s+/', '', $requestBody);
+        return md5("{$appKey}{$requestBody}{$appSecret}");
+    }
+
     public static function spiSign($appKey, $appSecret, $timestamp, $paramJson, $signMethodStr = 'md5') {
         $paramPattern = 'app_key' . $appKey . 'param_json' . $paramJson . 'timestamp' . $timestamp;
         $signPattern = $appSecret . $paramPattern . $appSecret;
