@@ -4,7 +4,7 @@ namespace AK\DoudianSDK\Entities\Param\Spi;
 
 use AK\DoudianSDK\Entities\BaseEntity;
 
-class CommonParam extends BaseEntity
+class SpiParam extends BaseEntity
 {
 
     private $app_key;

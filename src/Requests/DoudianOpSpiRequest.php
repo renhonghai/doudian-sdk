@@ -5,7 +5,7 @@ namespace AK\DoudianSDK\Requests;
 use AK\DoudianSDK\Core\DoudianOpSpiClient;
 use AK\DoudianSDK\Entities\DoudianOpConfig;
 use AK\DoudianSDK\Entities\DoudianOpSpiResponse;
-use AK\DoudianSDK\Entities\Param\SpiParam;
+use AK\DoudianSDK\Entities\Param\Spi\SpiParam;
 
 class DoudianOpSpiRequest
 {
