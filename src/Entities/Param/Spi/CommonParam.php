@@ -1,38 +1,36 @@
 <?php
 
-namespace AK\DoudianSDK\Entities\Param;
+namespace AK\DoudianSDK\Entities\Param\Spi;
 
 use AK\DoudianSDK\Entities\BaseEntity;
 
-class SpiParam extends BaseEntity
+class CommonParam extends BaseEntity
 {
 
-    private $appKey;
+    private $app_key;
 
     private $timestamp;
 
     private $sign;
 
-    private $signV2;
+    private $sign_method;
 
-    private $signMethod;
-
-    private $paramJson;
+    private $param_json;
 
     /**
      * @return mixed
      */
     public function getAppKey()
     {
-        return $this->appKey;
+        return $this->app_key;
     }
 
     /**
-     * @param mixed $appKey
+     * @param mixed $app_key
      */
-    public function setAppKey($appKey): void
+    public function setAppKey($app_key): void
     {
-        $this->appKey = $appKey;
+        $this->app_key = $app_key;
     }
 
     /**
@@ -70,33 +68,17 @@ class SpiParam extends BaseEntity
     /**
      * @return mixed
      */
-    public function getSignV2()
-    {
-        return $this->signV2;
-    }
-
-    /**
-     * @param mixed $signV2
-     */
-    public function setSignV2($signV2): void
-    {
-        $this->signV2 = $signV2;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getSignMethod()
     {
-        return $this->signMethod;
+        return $this->sign_method;
     }
 
     /**
-     * @param mixed $signMethod
+     * @param mixed $sign_method
      */
-    public function setSignMethod($signMethod): void
+    public function setSignMethod($sign_method): void
     {
-        $this->signMethod = $signMethod;
+        $this->sign_method = $sign_method;
     }
 
     /**
@@ -104,15 +86,15 @@ class SpiParam extends BaseEntity
      */
     public function getParamJson()
     {
-        return $this->paramJson;
+        return $this->param_json;
     }
 
     /**
-     * @param mixed $paramJson
+     * @param mixed $param_json
      */
-    public function setParamJson($paramJson): void
+    public function setParamJson($param_json): void
     {
-        $this->paramJson = $paramJson;
+        $this->param_json = $param_json;
     }
 
 }

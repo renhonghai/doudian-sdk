@@ -17,16 +17,32 @@ class ErrNoConstant
     const ERROR_CODE_API_SERVICE_OFF_ERROR = 70000;
     const ERROR_CODE_UNKNOWN_ERROR_ERROR = 90000;
 
+    const ERROR_CODE_INNER = -1;
+    const ERROR_CODE_TRADE_ORDER_NO = 1000;
+    const ERROR_CODE_TRADE_ORDER_STATUS = 1001;
+    const ERROR_CODE_TRADE_ORDER_NOT_FOUND = 1002;
+    const ERROR_CODE_PARAMETER_INVALID = 1003;
+    const ERROR_CODE_SIGN = 1004;
+    const ERROR_CODE_TRADE_ORDER_STATUS_NO_IN_PROCESS = 1005;
+
+
     const ERROR_CODE_MESSAGE = [
-        self::ERROR_CODE_SUCCESS                 => '请求成功',
-        self::ERROR_CODE_SERVICE_ERROR           => '服务不可用',
-        self::ERROR_CODE_PERMISSION_ERROR        => '操作权限不足',
-        self::ERROR_CODE_PARAMETER_MISSING_ERROR => '缺少必选参数',
-        self::ERROR_CODE_PARAMETER_INVALID_ERROR => '非法的参数',
-        self::ERROR_CODE_TOKEN_ERROR             => '平台处理失败',
-        self::ERROR_CODE_TRAFFIC_LIMITED_ERROR   => '触发限流，请稍后重试',
-        self::ERROR_CODE_API_SERVICE_OFF_ERROR   => '接口服务已下线',
-        self::ERROR_CODE_UNKNOWN_ERROR_ERROR     => '其他异常',
+        self::ERROR_CODE_SUCCESS                          => '请求成功',
+        self::ERROR_CODE_INNER                            => '内部出错，请重试',
+        self::ERROR_CODE_TRADE_ORDER_NO                   => 'trade_order_no 错误',
+        self::ERROR_CODE_TRADE_ORDER_STATUS               => '商家订单状态不符合预期，请填写SUCCESS或者FAILED',
+        self::ERROR_CODE_TRADE_ORDER_NOT_FOUND            => '没有对应的交易单据',
+        self::ERROR_CODE_PARAMETER_INVALID                => '参数校验失败',
+        self::ERROR_CODE_SIGN                             => '签名失败',
+        self::ERROR_CODE_TRADE_ORDER_STATUS_NO_IN_PROCESS => '当前充值不是IN_PROCESS状态',
+        self::ERROR_CODE_SERVICE_ERROR                    => '服务不可用',
+        self::ERROR_CODE_PERMISSION_ERROR                 => '操作权限不足',
+        self::ERROR_CODE_PARAMETER_MISSING_ERROR          => '缺少必选参数',
+        self::ERROR_CODE_PARAMETER_INVALID_ERROR          => '非法的参数',
+        self::ERROR_CODE_TOKEN_ERROR                      => '平台处理失败',
+        self::ERROR_CODE_TRAFFIC_LIMITED_ERROR            => '触发限流，请稍后重试',
+        self::ERROR_CODE_API_SERVICE_OFF_ERROR            => '接口服务已下线',
+        self::ERROR_CODE_UNKNOWN_ERROR_ERROR              => '其他异常',
     ];
 
     const ERROR_CODE_DETAIL_MESSAGE = [
