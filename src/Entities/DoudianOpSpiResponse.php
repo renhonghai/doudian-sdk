@@ -11,7 +11,7 @@ class DoudianOpSpiResponse extends BaseEntity
     private $message;
 
     /**
-     * @var SpiDataResponse $data
+     * @var SpiDataResponse | null $data
      */
     private $data;
 
@@ -48,17 +48,17 @@ class DoudianOpSpiResponse extends BaseEntity
     }
 
     /**
-     * @return SpiDataResponse
+     * @return SpiDataResponse|null
      */
-    public function getData(): SpiDataResponse
+    public function getData(): ?SpiDataResponse
     {
         return $this->data;
     }
 
     /**
-     * @param SpiDataResponse $data
+     * @param SpiDataResponse|null $data
      */
-    public function setData(SpiDataResponse $data): void
+    public function setData(?SpiDataResponse $data): void
     {
         $this->data = $data;
     }
