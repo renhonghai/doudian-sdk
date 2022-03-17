@@ -15,7 +15,7 @@ class BaseEntity
     /**
      * BaseEntity constructor.
      */
-    public function __construct(?array $items = [])
+    public function __construct(?array $items = null)
     {
         $items && $this->resolving($items);
     }
