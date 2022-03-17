@@ -2,10 +2,21 @@
 
 namespace AK\DoudianSDK\Entities;
 
+use AK\DoudianSDK\Constants\ResponseConstant;
 use AK\DoudianSDK\Entities\Response\SpiDataResponse;
 
 class DoudianOpSpiResponse extends BaseEntity
 {
+
+    public function __construct(?array $items = [])
+    {
+        parent::__construct($items ?? [
+            'code' => ResponseConstant::CODE_SUCCESS,
+            'message' => '请求成功',
+            'data' => new SpiDataResponse()
+        ]);
+    }
+
     private $code;
 
     private $message;
