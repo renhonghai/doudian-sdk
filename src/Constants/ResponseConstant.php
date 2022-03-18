@@ -19,12 +19,12 @@ class ResponseConstant
     /**
      * 对应code
      */
-    const CODE_SUCCESS = '0';
+    const CODE_SUCCESS = 0;
 
-    const CODE_ERROR_SIGN = '100001';
+    const CODE_ERROR_SIGN = 100001;
 
-    const CODE_ERROR_PARAM = '100002';
+    const CODE_ERROR_PARAM = 100002;
 
-    const CODE_ERROR_INNER = '100003';
+    const CODE_ERROR_INNER = 100003;
 
 }

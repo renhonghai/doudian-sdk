@@ -2,7 +2,6 @@
 
 namespace AK\DoudianSDK\Entities;
 
-use Exception;
 use ReflectionClass;
 use AK\DoudianSDK\Utils\{
     StrUtil,
@@ -43,6 +42,8 @@ class BaseEntity
 
                     $value[$k] = $val;
                 }
+            } else if ($value instanceof BaseEntity) {
+                $value = $value->toArray();
             }
 
             $items[$key] = $value;
